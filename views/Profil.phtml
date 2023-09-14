@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/ledelice/public/css/Profil.css">
+
+<div class="container">
+    <div class="head">
+        <span class="profil">Mon Profile</span>
+
+        <p>nous sommes heureux de vous revoir cher</p>
+        <span><?= $_SESSION["nom"]?> <?= $_SESSION["prenom"]?></span>
+    </div>
+    <div class="link">
+        <a href="/ledelice/user/modifyProfil">Modifier mes informations</a>
+        <a href="/ledelice/book/book">Mes reéservations</a>
+    </div>
+</div>

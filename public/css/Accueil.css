@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background-color: #000000;
+
+}
+
+/**/
+
+.base {
+    height: 50rem;
+    width: 100%;
+    background: url(/ledelice/public/img/pexels-waldemar-2290070.jpg) center center no-repeat;
+}
+
+
+.nom {
+    font-size: 3.75rem;
+    font-weight: 500;
+    color: #e4be4e;
+    font-family: 'Alex Brush', cursive;
+    background-color: #00000050;
+}
+
+
+.title {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+
+}
+
+.picture {
+    position: absolute;
+}
+
+/**/
+
+.apropos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 4%;
+
+}
+
+#apropostitle {
+    font-size: 40px;
+    font-weight: 500;
+    color: #e4be4e;
+}
+
+#apropostext {
+    margin-top: 2%;
+    text-align: center;
+    width: 80%;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .base {
+        height: 30rem;
+    }
+
+    .nom {
+        font-size: 2rem;
+    }
+
+    .title {
+        top: 50%;
+
+    }
+
+    .apropos {
+        margin: 1%;
+
+    }
+
+    #apropostitle {
+        font-size: 1.4rem;
+    }
+
+    #apropostext {
+        font-size: 0.8rem;
+        width: 90%;
+        word-spacing: 3px;
+    }
+
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Trattamento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/ledelice/public/css/layout.css">
+
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="links">
+            <?php
+            if ($_SESSION['id_role'] == 1) {
+            ?>
+                <a href="/ledelice/user/indexlog">Accueil</a>
+                <a href="/ledelice/admin/listMenuA">Menu</a>
+                <a href="/ledelice/admin/signinAdmin">Inscrire</a>
+                <a href="/ledelice/admin/bookStatus">Réservations</a>
+                <a href="/ledelice/user/logout">Deconnexion</a>
+            <?php } else if ($_SESSION['id_role'] == 2) {
+            ?>
+                <a href="/ledelice/user/indexlog">Accueil</a>
+                <a href="/ledelice/menu/listmenu">Menu</a>
+                <a href="/ledelice/book/book">Reserver</a>
+                <a href="/ledelice/user/myProfil">Profil</a>
+                <a href="/ledelice/user/logout">Deconnexion</a>
+
+            <?php } else {
+            ?>
+                <a href="/ledelice/user/indexlog">Accueil</a>
+                <a href="/ledelice/menu/listmenu">Menu</a>
+                <a href="/ledelice/book/book">Reserver</a>
+                <a href="/ledelice/user/login">Se Connecter</a>
+            <?php } ?>
+        </div>
+
+        <div class="menu-burger">
+            <span id="top"></span>
+            <span id="bot"></span>
+            <span id="mid"></span>
+        </div>
+    </nav>
+
+    <main>
+        <?php require_once $page; ?>
+    </main>
+
+    <footer>
+        <div class="container-footer">
+            <div class="row">
+                <div class="footer-col">
+                    <span>Mention légales</span>
+                    <ul>
+                        <li><a href="">Terms</a></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <span>Nos Horaires</span>
+                    <ul>
+                        <li><a href="">Du Lundi au Vendredi 10h00-23h00</a></li>
+                        <li><a href="">Samedi 12h00-23h00</a></li>
+                        <li><a href="">Dimanche fermé</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <span>Contact</span>
+                    <ul>
+                        <li><a href="">30 avenue henri pontier,<br> Aix-En-Provence 13100</a></li>
+                        <li><a href="">0753522570</a></li>
+                        <li><a href="">iltrattamento@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <span>Réseaux sociaux</span>
+                    <div class="social-links">
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/ledelice/public/js/Layout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="/ledelice/public/css/Log.css">
+
+
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form method="POST" action="/ledelice/user/login">
+			<span>S'inscrire</span>
+			<input type="text" required name="nom" placeholder="Nom" />
+			<input type="text" required name="prenom" placeholder="Prénom" />
+			<input type="email" required name="email" placeholder="Email" />
+			<input type="password"  pattern="^(?=.*[A-Z])(?=.*\d).{6,}$" name="mdp" placeholder="Mot de passe" />
+			<button type="submit" name="valider">S'inscrire</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form method="POST" action="/ledelice/user/loginPost">
+			<span>Se Connecté</span>
+			<input type="email" required name="email" placeholder="Email" />
+			<input type="password" pattern="^(?=.*[A-Z])(?=.*\d).{6,}$" name="password" placeholder="Mot de passe" />
+			<button type="submit" name="connect">Se Connecté</button>
+			<?php
+			if (isset($erreur)) {
+				echo "<p style='color:red'>$erreur</p>";
+			}
+			?>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Vous avez déjà un compte ?</h1>
+				<p>Connectez-vous dès maintenant pour savourer
+					toutes les délices de notre cuisine italienne.
+					Laissez-vous emporter dans un monde de saveurs!</p>
+				<button class="ghost" id="signIn">Se Connecté</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Pas de compte ?</h1>
+				<p>Rejoignez notre communauté gourmande
+					en créant un compte dès maintenant
+					et découvrez un monde de saveurs
+					italiennes à portée de clic!</p>
+				<button class="ghost" id="signUp">S'inscrire</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="/ledelice/public/js/Log.js"></script>

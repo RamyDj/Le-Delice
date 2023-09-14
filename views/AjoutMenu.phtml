@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/ledelice/public/css/AjoutMenu.css">
+
+<div class="container" id="container">
+<div class="form-container add-container">
+<form method="POST" action="/ledelice/menu/addPost">
+  <span>Ajouter un plat</span>
+  <input type="text" required="" name="titre" placeholder="Nom du menu">
+  <input type="text" name="contenu" placeholder="Contenu">
+  <input type="number" required="" step="0.01" name="prix" placeholder="Prix">
+  <select name="categorie">
+    <option>ANTIPASTI / À PARTAGER</option>
+    <option>INSALATA</option>
+    <option>PASTA</option>
+    <option>PIZZA</option>
+    <option>PESCE</option>
+    <option>RISOTTO</option>
+    <option>CARNE</option>
+    <option>DOLCI DELLA CASA</option>
+    <option>GELATO</option>
+    <option>COCKTAILS</option>
+  </select>
+  <button type="submit" id="valider" name="valider">Submit</button>
+  <?php if (isset($erreur)) : ?>
+    <div class="erreur"><?php echo $erreur; ?></div>
+<?php endif; ?>
+</form>
+</div>
+</div>

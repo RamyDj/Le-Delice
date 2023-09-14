@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/ledelice/public/css/ModifProfil.css">
+<div class="container">
+<div class="form-container">
+<form method="POST" action="/ledelice/user/modifyProfil">
+        <input type="text" name="nom" value="<?php echo $user['nom']; ?>" ><br>
+        <input type="text" name="prenom" value="<?php echo $user['prenom']; ?>" ><br>
+        <input type="text" name="mail" value="<?php echo $user['mail']; ?>" ><br>
+        <button type="submit" name="valider">Modifier</button>
+</form>
+</div>
+</div>
+

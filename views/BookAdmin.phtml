@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/ledelice/public/css/BookAdmin.css">
+
+<div class="container">  
+<span class="boook">Crée un compte admin</span>
+<?php foreach ($show as $shows): ?>
+<div class="card">
+  <div class="textBox">
+    <div class="textContent">
+      <p class="h1"><?= $shows['nomClient']?> <?= $shows['prenomClient']?></p>
+      <span class="span"><?= $shows['date']?></span>
+    </div>
+    <p class="p"><?= $shows['nbClient']?> personne</p>
+  <div>
+</div></div></div>
+<?php endforeach; ?>
+</div> 

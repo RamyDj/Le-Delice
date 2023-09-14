@@ -1,0 +1,187 @@
+<link rel="stylesheet" href="/ledelice/public/css/MenuAdmin.css">
+<div class="link">
+<a href="/ledelice/menu/add">Ajouter</a>
+</div>
+<div class="container">
+    <div class="menu">
+        <h2 class="menu-group-heading">Antipasti / À Partager</h2>
+        <?php foreach ($Antipasti as $antipasti): ?>
+        <div class="menu-group">
+            
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $antipasti['titre']; ?></span>
+                <span class="menu-item-price"><?= $antipasti['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $antipasti['contenu']; ?></p>
+             <a href="/ledelice/admin/updateMenu/<?= $antipasti['id']; ?>">Modifier</a>
+            </div>
+          </div>
+        </div>
+        <?php endforeach; ?>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Insalata</h2>
+        <div class="menu-group">
+        <?php foreach ($Insalata as $insalata): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $insalata['titre']; ?></span>
+                <span class="menu-item-price"><?= $insalata['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $insalata['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $insalata['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Pasta</h2>
+        <div class="menu-group">
+        <?php foreach ($Pasta as $pasta): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $pasta['titre']; ?></span>
+                <span class="menu-item-price"><?= $pasta['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $pasta['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $pasta['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Pizza</h2>
+        <div class="menu-group">
+        <?php foreach ($Pizza as $pizza): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $pizza['titre']; ?></span>
+                <span class="menu-item-price"><?= $pizza['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $pizza['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $pizza['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Pesce</h2>
+        <div class="menu-group">
+        <?php foreach ($Pesce as $pesce): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $pesce['titre']; ?></span>
+                <span class="menu-item-price"><?= $pesce['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $pesce['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $pesce['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Risotto</h2>
+        <div class="menu-group">
+        <?php foreach ($Risotto as $risotto): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $risotto['titre']; ?></span>
+                <span class="menu-item-price"><?= $risotto['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $risotto['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $risotto['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Carne</h2>
+        <div class="menu-group">
+        <?php foreach ($Carne as $carne): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $carne['titre']; ?></span>
+                <span class="menu-item-price"><?= $carne['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $carne['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $carne['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Dolci Della Casa</h2>
+        <div class="menu-group">
+        <?php foreach ($Dolci as $dolci): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $dolci['titre']; ?></span>
+                <span class="menu-item-price"><?= $dolci['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $dolci['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $dolci['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Gelato</h2>
+        <div class="menu-group">
+        <?php foreach ($Gelato as $gelato): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $gelato['titre']; ?></span>
+                <span class="menu-item-price"><?= $gelato['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $gelato['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $gelato['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+      <div class="menu">
+        <h2 class="menu-group-heading">Cocktails</h2>
+        <div class="menu-group">
+        <?php foreach ($Cocktails as $cocktails): ?>
+          <div class="menu-item">
+            <div class="menu-item-text">
+              <h3 class="menu-item-heading">
+                <span class="menu-item-name"><?= $cocktails['titre']; ?></span>
+                <span class="menu-item-price"><?= $cocktails['prix']; ?>€</span>
+              </h3>
+              <p class="menu-item-desc"><?= $cocktails['contenu']; ?></p>
+              <a href="/ledelice/admin/updateMenu/<?= $cocktails['id']; ?>">Modifier</a>
+            </div>
+          </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+
+    </div>

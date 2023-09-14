@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/ledelice/public/css/ModifMenu.css">
+
+<div class="container">
+    <div class="form-container ">
+        <form method="POST" action="/ledelice/book/updateBook/<?= $book['id']; ?>">
+
+            <span>Modifier ma réservation</span>
+            
+            <label for="nbClient">Titre :</label>
+            <input type="number" min="1" max="10" name="nbClient" value="<?php echo $book['nbClient']; ?>"><br>
+
+            <label for="date">Date :</label>
+            <input type="datetime-local" name="date" value="<?php echo $book['date']; ?>"><br>
+
+            <button type="submit" id="valider" name="valider">Submit</button>
+
+
+        </form>
+    </div>
+</div>

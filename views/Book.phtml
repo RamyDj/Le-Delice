@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/ledelice/public/css/Book.css">
+
+
+<div class="container">
+<form class="form" method="POST" action="/ledelice/book/book">
+    <input type="hidden" class="form-control" id="nomClient" name="nomClient" value="<?= $_SESSION['nom'] ?>">
+    <input type="hidden" class="form-control" id="prenomClient" name="prenomClient" value="<?= $_SESSION['prenom'] ?>">
+    <input type="hidden" class="form-control" id="id_client" name="id_client" value="<?= $_SESSION['id'] ?>">
+  <div class="form-group">
+    <label class="form-label" for="name">Date de réservation</label>
+    <input required="" type="datetime-local" class="form-input" name="date">
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="email">Nombre de personnes</label>
+    <input required="" type="number" min="1" max="10" class="form-input" name="nbClient">
+  </div>
+  <button class="form-button" type="submit" name="valider1">Valider</button>
+</form>
+
+
+<?php foreach ($show as $shows): ?>
+<div class="card">
+  <div class="textBox">
+    <div class="textContent">
+      <p class="h1"><?= $shows['nomClient']; ?> <?= $shows['prenomClient']; ?></p>
+      <span class="span"><?= $shows['date']; ?></span>
+    </div>
+    <p class="p"><?= $shows['nbClient']; ?> personne</p>
+    <a href="/ledelice/book/updateBook/<?= $shows['id']; ?>">Modifier</a>
+  <div>
+</div></div></div>
+<?php endforeach; ?>
+</div>
